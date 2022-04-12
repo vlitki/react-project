@@ -3,11 +3,11 @@ import './App.css';
 import { Counter } from "./components/Counter";
 import { GetDate } from "./components/GetDate"
 
-function App() {
+function App(props) {
   return (
     <div> This is a counter
     <div>
-      <Counter initialValue={0} increment={5} />
+      <Counter initialValue={0} increment={props.increment || -10} />
       </div>
     <div>
       Today is
